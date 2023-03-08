@@ -1,4 +1,4 @@
-# Miguel_tutorial
+# Linux_tutorial
 
 ## Se localizando no terminal utilizando <i>pwd<i>, <i>ls<i>, <i>mkdir<i>, <i>cd<i>, <i>man<i> e <i>help<i>.
 
@@ -105,26 +105,57 @@ Mas não é tão fácil assim. Pesquisar conteúdos de programação no Google r
 
 **Atividade:** procure no google o que as outras colunas retornadas da linha de comando acima significam.
 
+## Criando e navegando por diretórios. mkdir, cd.
+
+Para trabalhar com as linhas de comando, umas das principais atividades é navegar pelos diretórios. Navegar pelos diretórios significa mudar o diretório atual, aquele que você está. Para navegar pelos seus diretórios, nós vamos criar um novo diretório, chamado 'new_directory'. Após o novo diretório ser criado nós vamos mudar de diretório para criar novos arquivos neste 'new_directory'.
 
 
+Para checar qual é diretório atual, use o comando pwd apresentado anteriormente.
 
+```
+(base) Rafaels-MacBook-Pro:~ rafael$ pwd
+```
+
+**Pergunta:** qual é o seu diretório atual?
+
+Para criar um novo diretório, utilize o comando mkdir
+
+```
+(base) Rafaels-MacBook-Pro:~ rafael$ mkdir new_directory
 
 ```
 
+**Pergunta:** como você pode checar se o novo diretório foi criado?
+
+Para mudar o seu diretório atual para o novo diretório, utilize o comando cd.
+
 ```
+(base) Rafaels-MacBook-Pro:tutorial1_linux rafael$ cd new_diretory
+```
+**Pergunta:** como você pode checar se está no diretório desejado?
+
+
+É importante notar, o comando cd obedece a seguinte estrutra: cd [directory_path]
+
+O path the de um arquivo ou diretório é todo o caminho utilizado para chegar até um determinado arquivo ou diretório. 
+
+Por exemplo: 
+
+/home/rafael/Dropbox/working_folder_dropbox/Andrade_lab/Genomes
+
+Esta linha indica que o diretório 'Genomes' está dentro do diretório 'Andrade_lab' e assim por diante.
+
+Contudo, o prompt assume o path do seu diretório atual, e por isso você não precisa digitar o caminho inteiro de arquivos e diretórios que estão dentro do seu diretório atual. Esta regra serve tanto para o comando cd, como para outros comandos.
+
+Por exemplo:
+
+```
+(base) Rafaels-MacBook-Pro:new_diretory rafael$ cd ~/Users/rafael/Dropbox/working_folder_dropbox/Andrade_lab/IC/tutorial1_linux/new_diretory
+
+(base) Rafaels-MacBook-Pro:new_diretory rafael$ cd new_diretory
+```
+
+Ambos os comandos acima, são equivalentes caso você esteja no diretório 'Tutorial1_linux', mas são diferentes se você estiver em outro diretório.
 
 
 
-
-```
-
-```
-```
-
-```
-```
-
-```
-```
-
-```
