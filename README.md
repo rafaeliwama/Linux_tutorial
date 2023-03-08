@@ -156,6 +156,37 @@ Por exemplo:
 ```
 
 Ambos os comandos acima, são equivalentes caso você esteja no diretório 'Tutorial1_linux', mas são diferentes se você estiver em outro diretório.
+    
+Outro ponto importante é que escrever todo o path do diretório que você quer que seja o seu diretório atual é uma forma rápida de navegar por diretórios que não estejam diretamente acima ou abaixo do seu diretório atual. Nós vamos ver isso em exemplos mais pra frente.
+    
+Use o comando 'cd ..' para navegar para o diretório diretamente acima do seu diretório atual e verifique seu diretório atual com o comando pwd.
+    
+```
+(base) Rafaels-MacBook-Pro:new_diretory rafael$ cd ..
+(base) Rafaels-MacBook-Pro:new_diretory rafael$ pwd
+```
+    
+
+## Criando e printando arquivos de texto
+    
+Certo. Você já sabe como navegar pelos diretórios, mas esses diretórios estão completamente vazios. Como você pode começar a criar arquivos para trabalhar?
+    
+Dois comandos podem ser úteis para criar arquivos: 'touch' e 'nano'.
+
+O comando 'touch' cria arquivos vazios e pode ser útil qnd você quer redirecionar o conteúdo de um outro arquivo ou diretamente da linha de comando para este arquivo vazio.
+
+```
+(base) Rafaels-MacBook-Pro:tutorial1_linux rafael$ touch empty_file.txt
+(base) Rafaels-MacBook-Pro:tutorial1_linux rafael$ ls
+empty_file.txt	new_diretory
+```
+Observe que dois itens retornaram do comando ls, e um deles é o novo arquivo criado.
+    
+Nós nomeamos o novo arquivo utilizando o charactere '_' para separar as palavras. Isso ocorre, porque utilizar um espaco pode fazer com que o prompt entenda que nós estamos digitando o nome de dois arquivos, o empty e o file.txt
+    
+Perceba tbm o '.txt' no final do nome do arquivo. Este elemento é a extensão do arquivo, e possibilita que muitos softwares identifiquem de maneira rápida qual o formato do arquivo. Nós falaremos de outras extensões e formatos de arquivos mais tarde.
+    
+
 
 
 
