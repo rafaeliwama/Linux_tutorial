@@ -167,7 +167,7 @@ Use o comando 'cd ..' para navegar para o diretório diretamente acima do seu di
 ```
     
 
-## Criando e printando arquivos de texto
+## Criando e printando arquivos de texto utilizando touch, nano e cat
     
 Certo. Você já sabe como navegar pelos diretórios, mas esses diretórios estão completamente vazios. Como você pode começar a criar arquivos para trabalhar?
     
@@ -214,3 +214,21 @@ Rafaels-MacBook-Pro:tutorial1_linux rafael$ cat empty_file.txt
 (base) Rafaels-MacBook-Pro:tutorial1_linux rafael$ cat nano_file.txt 
 Truce fatos!
 ```
+
+**Pergunta:** o que acontece após você utilizar o comando cat para cada um dos arquivos?
+    
+
+# Baixando dados do github, inspecionando arquivos reais e extraindo dados de arquivos de texto
+    
+Muitos dos programas, base de dados e dados de sequenciamento são públicos e estão disponíveis para download. Você pode baixar os arquivos manualmente em suas respectivas páginas da web, mas esse processo pode consumir muito tempo e não permite um alto nível de reproducibilidade.
+    
+Por isso, é muito comum fazer o download desses programas, bases de dados e dados públicos direto do terminal, para que esse processo possa ser o mais automatizado possível.
+    
+Há muitos repositórios que armazenam dados de diferentes naturezas. O GitHub é um deles e ele permite o download de qualquer tipo de arquivo, inclusive softwares inteiros.
+    
+Nos próximos exercícios, nós vamos trabalhar com dados que já foram publicados e que eu estou disonibilizando para download pelo GitHub para fins didáticos.
+
+    
+    
+    
+    
