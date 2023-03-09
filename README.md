@@ -363,4 +363,10 @@ Esse exercício tem uma pegadinha. o charactere '>' indica o começo de uma nova
 
 Para que o 'grep' entenda que você está procurando por esse padrão, você pode utilizar aspas single ou double para indicar o padrão. Na realidade as aspas single ou double indicam sempre uma sequência de caracteres em quase todas as linguagens de programação. Essas sequências são chamadas de strigs, mas isso a gente vê melhor depois.
     
+Utilize o seguinte comando:
 
+```
+(base) Rafaels-MacBook-Pro:Linux_tutorial rafael$ grep '>' anti_dec2016.fasta
+```
+    
+Note as aspas simples e que o grep retorna todas as linhas que marcam o início da sequencia e suas descrições. Porém, contar todas essas linhas manualmente é um processo horrível.
