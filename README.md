@@ -1,7 +1,6 @@
 # Linux_tutorial
 
-## Se localizando no terminal utilizando <i>pwd<i>, <i>ls<i>, <i>mkdir<i>, <i>cd<i>, <i>man<i> e <i>help<i>.
-
+## Se localizando e navegando no terminal utilizando <i>pwd<i>, <i>ls<i>, <i>mkdir<i>, <i>cd<i>
 A imagem abaixo representa uma janela do terminal.
 
 
@@ -207,7 +206,7 @@ Digite a seguinte frase no editor de texto: "Truce fatos!"
 
 Feche o nano utilizando o comando ctr+x e siga as instruções para salvar o arquivo.
 
-Em seguida utilize o comando cat para inspecionar o conteúdo dos arquivos 'empty_file.txt' e 'nano_file.txt'.
+Em seguida utilize o comando 'cat' para inspecionar o conteúdo dos arquivos 'empty_file.txt' e 'nano_file.txt'.
 
 ```
 Rafaels-MacBook-Pro:tutorial1_linux rafael$ cat empty_file.txt 
@@ -215,7 +214,7 @@ Rafaels-MacBook-Pro:tutorial1_linux rafael$ cat empty_file.txt
 Truce fatos!
 ```
 
-**Pergunta:** o que acontece após você utilizar o comando cat para cada um dos arquivos?
+**Pergunta:** o que acontece após você utilizar o comando 'cat' para cada um dos arquivos?
     
 
 # Baixando dados do GitHub, inspecionando arquivos reais e extraindo dados de arquivos de texto
@@ -401,3 +400,58 @@ Vamos utilizar RegEx para encontrar o padrão das sequências proveniêntes do S
     
 Podemos utilizar o seguinte comando:
 ```
+(base) Rafaels-MacBook-Pro:Linux_tutorial rafael$ grep -E -o '[A-Z]+[0-9]{5,}_[A-Z][a-z]+.*' anti_dec2016.fasta 
+P80302_Hirustasin
+P81492_Bufrudin
+AAB27871_Gelin
+P81499_Piguamerin
+AAA29193_Antistasin
+Q07558_Hirudin
+P84590_Hirudin
+P28504_Hirudin_2
+P09865_Bdellin
+```
+
+**Pergunta:** o que significa cada um dos elementos na linha de comando acima?
+
+Para finalizar este tutorial, nós queremos armazenar essa lista em um arquivo de texto. Assim, nós podemos utilizar esta lista para outras coisas no próximo tutorial.
+
+A forma mais simples de realizar esta tarefa é utilizar o caractere '>'. Este caractere redireciona o output de um determinado comando para um arquivo especificado após o caractere '>'.
+
+Para redirecionar o output do comando acima, digite:
+
+```
+(base) Rafaels-MacBook-Pro:Linux_tutorial rafael$ grep -E -o '[A-Z]+[0-9]{5,}_[A-Z][a-z]+.*' anti_dec2016.fasta > tested_anticogs.txt
+
+```
+
+Por último, verifique se o novo arquivo foi criado e inspecione o seu conteúdo.
+
+
+# O que você aprendeu até aqui
+
+- Se localizar no terminal utilizando os comandos 'pwd', 'ls', 'cd', 'mkdir'
+
+- O que é o path
+
+- O que são opções de comando
+
+- Criar e printar arquivos com 'cat', 'nano' e 'touch', 'head' e 'tail'
+
+- O que é um arquivo fasta
+
+- Copiar e remover arquivos com 'cp' e 'rm'
+
+- Encontrar padrões em arquivos de texto com 'grep'
+
+- Redirecionar outputs para um arquivo de texto com '>'
+
+
+# Próximos passos:
+
+ - Editar aquivos de text utilizando o terminal.
+
+ - Utilizar loops para tarefas repetitivas em múltiplos arquivos
+ 
+ - Escrever os primeiros scripts básicos em UNIX: Hello world!
+ 
