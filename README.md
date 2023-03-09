@@ -199,4 +199,8 @@ Digite a a seguinte linha de comando:
 Repare que nós especificamos o nome do novo arquivo criado. Você pode omitir o nome do novo arquivo e nomeá-lo depois, no próprio nano caso dejesar.
 
 
+A figure abaixo é uma representação do editor de texto nano:
+    
+<img width="675" alt="Screen Shot 2023-03-08 at 9 15 21 PM" src="https://user-images.githubusercontent.com/46658489/223884877-bbad847b-dd06-437a-ab0b-a4c83884e32d.png">
 
+Digite a seguinte frase no editor de texto: "
