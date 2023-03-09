@@ -45,7 +45,7 @@ Para listar os arquivos e diretórios presentes no diretório atual, utilize o c
 AmpAmp  notebook_genomes.txt  PolPol  SacCar  SemBal
 ```
 
-### opções de comandos
+### Opções de comandos
 
 Normalmente, comandos podem aceitar ou exigir a utilização de opções. Apesar de cada comando ter formatos de opções diferentes, no geral, utiliza-se um dos seguintes formatos:
 -opção1, --opção2, -o3.
@@ -363,10 +363,41 @@ Esse exercício tem uma pegadinha. o charactere '>' indica o começo de uma nova
 
 Para que o 'grep' entenda que você está procurando por esse padrão, você pode utilizar aspas single ou double para indicar o padrão. Na realidade as aspas single ou double indicam sempre uma sequência de caracteres em quase todas as linguagens de programação. Essas sequências são chamadas de strigs, mas isso a gente vê melhor depois.
     
-Utilize o seguinte comando:
+Utilize o seguinte comando: 
 
 ```
 (base) Rafaels-MacBook-Pro:Linux_tutorial rafael$ grep '>' anti_dec2016.fasta
 ```
+**Atenção:** se você esquecer as aspas, o arquivo 'anti_dec2016.fasta' vai ser substituído por um arquivo em branco. E aí aquele backup seria muito útil e você vai ter sido iludido duas vezes!
+
+Note as aspas simples e que o grep retorna todas as linhas que marcam o início da sequência e suas descrições. Porém, contar todas essas linhas manualmente é um processo horrível.
     
-Note as aspas simples e que o grep retorna todas as linhas que marcam o início da sequencia e suas descrições. Porém, contar todas essas linhas manualmente é um processo horrível.
+Utilize a opção '-c' do grep para contar o número de linhas que contém o caractere '>'.
+    
+```    
+(base) Rafaels-MacBook-Pro:Linux_tutorial rafael$ grep -c '>' anti_dec2016.fasta
+1691
+```
+    
+Muito mais fácil né? Há 1691 sequências nesso arquivo 'anti_dec2016.fasta'.
+
+## Uma explicação do arquivo 'anti_dec2016.fasta'
+
+O arquivo 'anti_dec2016.fasta' contém sequências de proteínas que estão associadas a atividade anticoagulante em animais hematófagos. Porém, existem dois tipos de sequências nesse arquivo. Sequências que tem sua estrutura e função determinada experimentalmente e outras sequências que têm sua função determinada através de análise de similaridade. Fica claro que a relevância que nós podemos dar para estes dois tipos de sequências é diferente. Desta forma, seria muito interessante separar estes dois tipos de sequencias em dois arquivos diferentes para que nós possamos rodar analises e atribuir pesos diferentes para os dois grupos.
+    
+As sequências com função testada empiramente foram obtidas de uma base dados chamada Swiss-prot e a descrição da sequência, o que vem depois do '>' no arquivo fasta, segue o seguinte formato: Q07558_Hirudin.
+    
+    - Uma letra ou mais letras, seguida de 5 números, o caractere '_' e o nome da proteína com a primeira letra uppercase.
+    
+É possível utilizar o grep para encontrar padrões mais gerais, em que strings diferentes dão match com o padrão utilizado pelo grep. Para isso, nós utilizamos expressões regulares, ou RegEx.
+    
+RegEx são expressão que descrevem padrões gerais. Você pode pensar em RegEx como coisas do tipo, um 'A' ou um 'B'. Um 'a' ou um 'A'. Uma sequencia de cinco caracteres numéricos. Coisas desse tipo.
+
+Há vários sites que disponibilizam as RegEx. Eu recomendo esse aqui: https://cheatography.com/davechild/cheat-sheets/regular-expressions/
+
+É importante mencionar que as RegEx podem mudar um pouco de comando para comando e de linguagem para linguagem. Então se algo não funcionar, vale a pena procurar uma cheatsheet específica para um determinado comando.
+    
+Vamos utilizar RegEx para encontrar o padrão das sequências proveniêntes do Swiss-prot.
+    
+Podemos utilizar o seguinte comando:
+```
