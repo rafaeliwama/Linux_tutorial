@@ -218,7 +218,7 @@ Truce fatos!
 **Pergunta:** o que acontece após você utilizar o comando cat para cada um dos arquivos?
     
 
-# Baixando dados do github, inspecionando arquivos reais e extraindo dados de arquivos de texto
+# Baixando dados do GitHub, inspecionando arquivos reais e extraindo dados de arquivos de texto
     
 Muitos dos programas, base de dados e dados de sequenciamento são públicos e estão disponíveis para download. Você pode baixar os arquivos manualmente em suas respectivas páginas da web, mas esse processo pode consumir muito tempo e não permite um alto nível de reproducibilidade.
     
@@ -336,4 +336,31 @@ Vamos deletar esse arquivo sobrando aí? Utilize o comando rm para remover arqui
 ```
 (base) Rafaels-MacBook-Pro:Linux_tutorial rafael$ rm anti_dec2016_backupc.fasta    
 ```   
+
+## Utilizando 'grep' para inspecionar arquivos
+    
+É muito comum que durante as atividades de pesquisa em bionformática seja necessário entender muito bem os nossos dados, e conferir se o que nós queremos fazer realmente foi feito.
+    
+Uma das ferramentais fundamentais para esta atividade é o comando 'grep'. Com este comando é possível buscar por padrões dentro do arquivo de texto. Em princípio, o 'grep' retorna as linhas que contem o padrão procurado.
+    
+Por exemplo, procure pelo padrão 'Macrobdella' no arquivo 'anti_dec2016.fasta'.
+    
+```
+(base) Rafaels-MacBook-Pro:Linux_tutorial rafael$ grep Macrobdella anti_dec2016.fasta 
+>Macrobdella2B10strict38_Ctype_lectin
+>Macrobdella10A03strict686_ficolin
+>Macrobdella14D11strict26_kazal_type_serpin
+>Macrobdella18C11strict18_HIS_ASP_rich
+>Macrobdella14F06strict7_HIS_rich
+>MacrobdellaN4G11strict45_KGD_disintegrin
+>MacrobdellaN4E09strict41_leucocyte_elastase_inhibitor
+```
+O grep retorna 7 linhas que contem esse padrão. O padrão dado para o grep é exato. Isso quer dizer que ele diferencia uppercase e lowercase.
+    
+**Exercício:** vamos supor que você queira contar quantas sequencias há no arquivo 'anti_dec2016.fasta'. Como você faria?
+    
+Esse exercício tem uma pegadinha. o charactere '>' indica o começo de uma nova sequencia, portanto ele é o mais indicado para ser utilizado para contabilizar as sequências em formato fasta. Contudo, esse caractere tem um outro significado em UNIX que eu vou demostrar mais para frente.
+
+Para que o 'grep' entenda que você está procurando por esse padrão, você pode utilizar aspas single ou double para indicar o padrão. Na realidade as aspas single ou double indicam sempre uma sequência de caracteres em quase todas as linguagens de programação. Essas sequências são chamadas de strigs, mas isso a gente vê melhor depois.
+    
 
