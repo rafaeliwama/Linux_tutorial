@@ -307,4 +307,22 @@ Veja que o arquivo possui um padrão. Há múltiplos '>' seguidos por uma descri
     
 Basicamente, este é o formato fasta e sua estrutra é ilustrada na figura abaixo:
     
+Screen Shot 2023-03-08 at 11.24.47 PM.png<img width="551" alt="image" src="https://user-images.githubusercontent.com/46658489/223899738-018e5c61-d159-486a-8b0e-cb144f5da70e.png">
+
+    
+ - O character '>' indica o ínicio de uma nova sequência.
+ - A descrição da sequencia pode conter o nome do gene, a espécie que a sequência foi isolada e outras informações úteis
+ - A sequência pode ocupar múltiplas linhas, e podem ser sequencia de DNA, RNA e proteínas.
+    
+ **Pergunta:** que tipo de sequências estão armazenadas no arquivo 'anti_dec2016.fasta'.
+    
+    
+ Antes de começar a trabalhar com os arquivos com sequências reais, é uma boa prática fazer o backup dos arquivos. Nós podemos fazer uma cópia do arquivo que contém essas sequencias com o comando 'cp'.
+    
+```
+(base) Rafaels-MacBook-Pro:Linux_tutorial rafael$ cp anti_dec2016.fasta anti_dec2016_backup.fasta
+ 
+```
+Utilizando o comando ls, você verá que uma cópia desse arquivo foi criada no diretório atual. O segundo argumento é o nome da cópia que será criada. Você pode especificar o path de outro diretório também.
+    
 
