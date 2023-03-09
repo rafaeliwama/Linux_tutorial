@@ -307,7 +307,8 @@ Veja que o arquivo possui um padrão. Há múltiplos '>' seguidos por uma descri
     
 Basicamente, este é o formato fasta e sua estrutra é ilustrada na figura abaixo:
     
-Screen Shot 2023-03-08 at 11.24.47 PM.png<img width="551" alt="image" src="https://user-images.githubusercontent.com/46658489/223899738-018e5c61-d159-486a-8b0e-cb144f5da70e.png">
+
+<img width="551" alt="Screen Shot 2023-03-08 at 11 24 47 PM" src="https://user-images.githubusercontent.com/46658489/223902873-c94ffeb1-bb6b-4158-8c8c-09003f86d09a.png">
 
     
  - O character '>' indica o ínicio de uma nova sequência.
@@ -321,8 +322,18 @@ Screen Shot 2023-03-08 at 11.24.47 PM.png<img width="551" alt="image" src="https
     
 ```
 (base) Rafaels-MacBook-Pro:Linux_tutorial rafael$ cp anti_dec2016.fasta anti_dec2016_backup.fasta
- 
 ```
 Utilizando o comando ls, você verá que uma cópia desse arquivo foi criada no diretório atual. O segundo argumento é o nome da cópia que será criada. Você pode especificar o path de outro diretório também.
+
+![iludido](https://user-images.githubusercontent.com/46658489/223901880-389d421d-729c-4890-9f3d-b5c32ae3e7fc.jpg)
+
+Você acaba de ser iludido!
+
+Realmente é uma boa prática fazer cópias dos seus arquivos. Mas né, isso é só um exercício. Quem liga?
     
+Vamos deletar esse arquivo sobrando aí? Utilize o comando rm para remover arquivos. Acrescente as opções -rf para remover diretórios e tds os seus respectivos arquivos e diretórios. Aproveite e cheque se o arquivo realmente foi deletado!
+    
+```
+(base) Rafaels-MacBook-Pro:Linux_tutorial rafael$ rm anti_dec2016_backupc.fasta    
+```   
 
