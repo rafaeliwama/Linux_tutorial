@@ -203,4 +203,14 @@ A figure abaixo é uma representação do editor de texto nano:
     
 <img width="675" alt="Screen Shot 2023-03-08 at 9 15 21 PM" src="https://user-images.githubusercontent.com/46658489/223884877-bbad847b-dd06-437a-ab0b-a4c83884e32d.png">
 
-Digite a seguinte frase no editor de texto: "
+Digite a seguinte frase no editor de texto: "Truce fatos!"
+
+Feche o nano utilizando o comando ctr+x e siga as instruções para salvar o arquivo.
+
+Em seguida utilize o comando cat para inspecionar o conteúdo dos arquivos 'empty_file.txt' e 'nano_file.txt'.
+
+```
+Rafaels-MacBook-Pro:tutorial1_linux rafael$ cat empty_file.txt 
+(base) Rafaels-MacBook-Pro:tutorial1_linux rafael$ cat nano_file.txt 
+Truce fatos!
+```
