@@ -270,9 +270,41 @@ Apenas 10 linhas são printadas utilizando o comando head. Para mudar o número 
 Da mesma forma que o comando 'head' printa as primeiras linhas do arquivo, o comando 'tail' printa as últimas linhas do arquivo!
 
 
-**Atividade:** printe as 20 primeiras e 20 últimas linhas do arquivo 'anti_dec2016.fasta'
+**Atividade:** printe as 20 primeiras e 20 últimas linhas do arquivo 'anti_dec2016.fasta'.
 
 
-
+## arquivos fasta, o principal formato de arquivo para sequencias biológicas!
     
+Se você ainda não fechou seu terminal, você deve estar confuso com tanta coisa escrita no seu terminal.
     
+Pode ser muito gratificante ter a sensação de um terminal novo, sem perder as informações printadas nele. Para isso, utilize o comando 'clear'. E inspecione novamente as 20 primeiras linhas do arquivo 'anti_dec2016.fasta'.
+    
+```
+(base) Rafaels-MacBook-Pro:Linux_tutorial rafael$ clear
+(base) Rafaels-MacBook-Pro:Linux_tutorial rafael$ head -n 20 anti_dec2016.fasta 
+>gi|3411116|gb|AAC31158.1|_FXa-directed_anticoagulant_precursor_Aedes_aegypti
+MYLKIVILVTFPLVCFTQDDTPLSKPMAIDYQAEFAWDLYKKLQLGFTQNLAIAPYSLRKIFVCLQQLTV
+STNPASAALSEQLKMYLRFNPKGKLPDLVRRRYSSQRAMLERENSFNTTTLAAVIGREKKTNSFWDLPNS
+CAIFVGSLRPGSPKQMSRRFNAAMRNISKSGMQNFLSTSDIDRDLDFLIADSWIFKGLWSYQFEEQHTTT
+CNFYTNSTSKGLMRFMYLQEYLKYGYFSEWNVEAVELPLHHGSSFSCMLMMPVKADIGVLIKSLNHRRFK
+DIYSKMSFSKTDVRLPQFTLRIKFSAKSILQQFGFNAAFNESVFHVFDNKNAVPLGDVIQKVKLVMDHDG
+EQSAKMYVDRRMGNLFIAHQPFIFVIFEKTQLVPIIVGHMVTASTPKDIGPESDEISCDRPPRYQ
+
+>gi|56417456|gb|AAV90669.1|_FXa-directed_anticoagulant_precursor_Aedes_albopictus
+MNLKIAIIVICQLVYFTQGDTVPSKPLSVDYQAEFSWDLYKKLYPEFRRNMVISPYSLRKIFVCLHQLTD
+AKDPATTKFSKQLHKVFKFNPTGQLPDLVRRRYENQREAYAQDQGLNTTTLAVVLGRKKKTTHALNNLPK
+SCGIFARSLKSGSPKQMTRSLNAAMKNISNGAAQSFLSESDLNRDWDFFVADSWLFKGFWRYQFEEEYTT
+TCNFYTNAKKKGLMRFMYLEEMLRVGHFPQWNVRAVELPLHRESPFSCVLMMPVAADIEELIESLSHKRF
+KEIYDNMSASKTTVRLPQFRLRMKLSAKSMLEQLGFDTAFKESVFRVFEKDGAIPLGDAIQKMDLSMAHE
+GEDLAKTYVDRSLGQQFTAHQPFMFVIFDRKELVPIIVGNVVAAITPKDVGPQSDEKLCDNPPRFNGR
+
+>gi|56417462|gb|AAV90672.1|_salivary_serpin_putative_anticoagulant_Aedes_albopictus
+MNPLVFAVLSVFFVSSIRTQSTSTPPLSDDTHNEFTWIAFKKVSADYKENFVMSPYSLRRLFSCFQGVKL
+LSAGAGTNLQQELNSVLNIVPNQQPSGQDHRPYVDQWLRYANAKQLNRTAMAVAIGSEKASSIFDSITNY
+CVVYTGYLQPSDGQRMGQVVNDALKKITNNSVLNYLADTDINPNWKFFAIDSWQFDGLWKYKSQEEFTAT
+```
+Veja que o arquivo possui um padrão. Há múltiplos '>' seguidos por uma descrição e na linha seguinte há várias letras em uppercase.
+    
+Basicamente, este é o formato fasta e sua estrutra é ilustrada na figura abaixo:
+    
+
