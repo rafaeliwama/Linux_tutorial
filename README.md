@@ -228,7 +228,51 @@ Há muitos repositórios que armazenam dados de diferentes naturezas. O GitHub �
     
 Nos próximos exercícios, nós vamos trabalhar com dados que já foram publicados e que eu estou disonibilizando para download pelo GitHub para fins didáticos.
 
-    
-    
+
+Para baixar o repositório com todos os dados necessário para realizar os próximos exercícios digite:
+
+```
+(base) Rafaels-MacBook-Pro:tutorial1_linux rafael$ git clone https://github.com/rafaeliwama/Linux_tutorial.git
+(base) Rafaels-MacBook-Pro:tutorial1_linux rafael$ ls
+Linux_tutorial	empty_file.txt	nano_file.txt	new_diretory
+```
+
+O comando passa a opção clone para o software git, que faz clona o diretório Linux_tutorial do meu repositório no GitHub para a seu diretório atual. Por fim, o comando ls lista os arquivos e diretórios presentes no seu diretório atual.
+
+**Atividade:** mova-se para o diretório 'Linux_tutorial' e inspecione o arquivo 'anti_dec2016.fasta' utilizando o comando 'cat'.
+
+
+Perceba que este arquivo é grande e pode ser difícil a visualização do comeco e do final do arquivo.
+
+Arquivos de utilizados em bioformática normalmente são extensos e possuem muitos dados. inspecianar esses arquivos com 'cat' pode se tornar inviável rapidamente, pela falta de praticidade. 
+
+
+Para inspecionar apenas o começo do arquivo, digite utilize o comando 'head'.
+
+```
+(base) Rafaels-MacBook-Pro:Linux_tutorial rafael$ head anti_dec2016.fasta
+Rafaels-MacBook-Pro:Linux_tutorial rafael$ head anti_dec2016.fasta 
+>gi|3411116|gb|AAC31158.1|_FXa-directed_anticoagulant_precursor_Aedes_aegypti
+MYLKIVILVTFPLVCFTQDDTPLSKPMAIDYQAEFAWDLYKKLQLGFTQNLAIAPYSLRKIFVCLQQLTV
+STNPASAALSEQLKMYLRFNPKGKLPDLVRRRYSSQRAMLERENSFNTTTLAAVIGREKKTNSFWDLPNS
+CAIFVGSLRPGSPKQMSRRFNAAMRNISKSGMQNFLSTSDIDRDLDFLIADSWIFKGLWSYQFEEQHTTT
+CNFYTNSTSKGLMRFMYLQEYLKYGYFSEWNVEAVELPLHHGSSFSCMLMMPVKADIGVLIKSLNHRRFK
+DIYSKMSFSKTDVRLPQFTLRIKFSAKSILQQFGFNAAFNESVFHVFDNKNAVPLGDVIQKVKLVMDHDG
+EQSAKMYVDRRMGNLFIAHQPFIFVIFEKTQLVPIIVGHMVTASTPKDIGPESDEISCDRPPRYQ
+
+>gi|56417456|gb|AAV90669.1|_FXa-directed_anticoagulant_precursor_Aedes_albopictus
+MNLKIAIIVICQLVYFTQGDTVPSKPLSVDYQAEFSWDLYKKLYPEFRRNMVISPYSLRKIFVCLHQLTD
+
+```
+
+Apenas 10 linhas são printadas utilizando o comando head. Para mudar o número de linhas printadas adicione no comando a opção '-n <INT>', onde '<INT>' é o número de linhas que você deseja que sejam printadas.
+
+Da mesma forma que o comando 'head' printa as primeiras linhas do arquivo, o comando 'tail' printa as últimas linhas do arquivo!
+
+
+**Atividade:** printe as 20 primeiras e 20 últimas linhas do arquivo 'anti_dec2016.fasta'
+
+
+
     
     
