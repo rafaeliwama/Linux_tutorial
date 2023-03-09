@@ -187,6 +187,16 @@ Nós nomeamos o novo arquivo utilizando o charactere '_' para separar as palavra
 Perceba tbm o '.txt' no final do nome do arquivo. Este elemento é a extensão do arquivo, e possibilita que muitos softwares identifiquem de maneira rápida qual o formato do arquivo. Nós falaremos de outras extensões e formatos de arquivos mais tarde.
     
 
+Para criar e editar arquivos de textos, nós podemos utilizar o comando 'nano'. Este comando abre um editor de text no próprio terminal e permite a edição rápida de arquivos .txt sem que você precise abrir o arquivo. Esta estratégia possui duas vantagens. Você não precisa abrir um editor de text fora do terminal, que pode consumir muita memória caso o arquivo seja grande. E a outra vantagem é que você não precisar fazer upload e download de arquivos de textos de um servidor para editá-los.
+
+
+Digite a a seguinte linha de comando:
+
+```
+(base) Rafaels-MacBook-Pro:tutorial1_linux rafael$ nano nano_file.txt
+```
+
+Repare que nós especificamos o nome do novo arquivo criado. Você pode omitir o nome do novo arquivo e nomeá-lo depois, no próprio nano caso dejesar.
 
 
 
