@@ -49,7 +49,7 @@ Para descomprimir e converter arquivos .gz e .tar, utilize o comando 'tar'.
 tar zxvpf ncbi-blast-2.10.0+-x64-linux.tar.gz
 ```
 
-LEmbre que 'zxvpf' são as opções que especificam a função de 'tar'.
+Lembre que 'zxvpf' são as opções que especificam a função de 'tar'.
 
 
 
