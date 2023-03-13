@@ -27,8 +27,18 @@ Uma das atividades que mais consome o tempo do bioinformata é instalar programa
 
 Caso você esteja utilizando uma distribuição do linux no Windows 10, não se esqueça de se dirigir ao diretório /home
 
-
+``` 
 cd ~
-'''
+``` 
+
+faco o download do diretório que contém os arquivos do Blast+ com 'wget'.
+
+```
+wget https://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/2.10.0/ncbi-blast-2.10.0+-x64-linux.tar.gz
+``` 
+Com wget você pode fazer o download the arquivos apenas com o endereço em que o arquivo está hospedado.
+
+
+
 
 
