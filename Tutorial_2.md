@@ -38,6 +38,21 @@ wget https://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/2.10.0/ncbi-blast-2.1
 ``` 
 Com wget você pode fazer o download the arquivos apenas com o endereço em que o arquivo está hospedado.
 
+Analise o nome do arquivo que você acabou de baixar. Hint: use o comando ls para listar os arquivos e diretórios.
+
+Repare que o final do arquivo acaba com a sufixo .tar.gz
+Arquivos .gz estão comprimidos e arquivos .tar são como diretórios que contém mais de um arquivo. Contudo este formato é especializado na distribuição de arquivos e não na execução e armazenamento.
+
+Para descomprimir e converter arquivos .gz e .tar, utilize o comando 'tar'.
+
+```
+tar zxvpf ncbi-blast-2.10.0+-x64-linux.tar.gz
+```
+
+LEmbre que 'zxvpf' são as opções que especificam a função de 'tar'.
+
+
+
 
 
 
