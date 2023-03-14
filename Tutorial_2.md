@@ -125,3 +125,6 @@ source ~/.bashrc
 blastp
 ```
 
+## Base de dados do blast
+
+Para rodar o blast, nós precisamos de uma base de dados para comparar com as sequências que nṍs queremos identificar. O 
