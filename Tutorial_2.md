@@ -49,11 +49,33 @@ Para descomprimir e converter arquivos .gz e .tar, utilize o comando 'tar'.
 tar zxvpf ncbi-blast-2.10.0+-x64-linux.tar.gz
 ```
 
-Lembre que 'zxvpf' são as opções que especificam a função de 'tar'.
+Lembre-se que 'zxvpf' são as opções que especificam a função de 'tar'.
 
 
+Agora, inspecione o contéudo da pasta 'rmblast-2.13.0' utilizando os comandos 'cd' e 'ls'.
 
+```
+(base) rafael@malaco:~$ cd rmblast-2.13.0/
+(base) rafael@malaco:~/rmblast-2.13.0$ ls
+bin  LICENSE.rmblast  README.blast  README.rmblast
+```
 
+Perceba que há alguns arquivos com o sufixo '.rmblast' e '.blast'. Estes arquivos contém explicações sobre os softwares pertencentes ao 'Blast+ suite'. Dentro desse diretório, o diretório bin é o mais importante deste programa. Ela contém os arquivos binários que estão associados ao 'Blast+'. 
 
+**Atividade:** inspecione o conteúdo do diretório 'bin'.
 
+Estes arquivos binários são os arquivos executáveis do 'Blast+'. Para você executar estes arquivos, você terá que mudar de diretório atual para o diretório bin e indicar para o prompt que você deseja executar o arquivo binário no diretório em que ele está. Para isso utilize os seguintes comandos:
 
+```
+cd bin
+./blastp
+```
+
+Onde:
+bin - diretório que contém os arquivos binários.
+./ - indica que você deseja executar o arquivo binário no diretório atual ou no path que você indicar.
+blastp - é o software que você deseja executar. Neste caso, o blastp é a versão do blast que aceita sequências de proteína tanto como input, tanto como em sua base de dados.
+
+Como resultado desses comandos, você verá um erro. Isso acontece porque nós utilizados a sintaxe correta do 'blastp'. Mas antes de utilizar-mos o blastṕ corretamente, nós temos que terminar de instalar o programa corretamente.
+
+Assim como os comandos 'cd', 'mkdir', 'cat' ou 'grep' que você digita no terminal, estes programas podem ser chamados da mesma forma
