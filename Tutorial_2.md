@@ -25,7 +25,7 @@ Hoje, nós vamos instalar o blast, identificar sequências que são possíveis a
 
 Uma das atividades que mais consome o tempo do bioinformata é instalar programas que são utilizados nas análises. Alguns softwares possuem uma instalação bem trabalhosa, mas o blast não é um desses. Exatamente por isso, a primeira coisa que a gente vai instalar é ele.
 
-Caso você esteja utilizando uma distribuição do linux no Windows 10, não se esqueça de se dirigir ao diretório /home
+Caso você esteja utilizando uma distribuição do linux no Windows 10, não se esqueça de se dirigir ao diretório '/home'
 
 ``` 
 cd ~
@@ -78,4 +78,50 @@ blastp - é o software que você deseja executar. Neste caso, o blastp é a vers
 
 Como resultado desses comandos, você verá um erro. Isso acontece porque nós utilizados a sintaxe correta do 'blastp'. Mas antes de utilizar-mos o blastṕ corretamente, nós temos que terminar de instalar o programa corretamente.
 
-Assim como os comandos 'cd', 'mkdir', 'cat' ou 'grep' que você digita no terminal, estes programas podem ser chamados da mesma forma
+Assim como os comandos 'cd', 'mkdir', 'cat' ou 'grep' que você digita no terminal, estes programas podem ser chamados da mesma forma. Mas para isso nós precisamos adicionar estes arquivos binários no PATH. Aqui é importante que você diferencie o path e o PATH.
+
+
+Enquanto o path é o caminho exato de um arquivo ou diretório. Já o PATH especifica o caminho de um diretório em que se encontra os arquivos binário para executá-los. Basicamente, quando você digita o comando 'cat' no terminal, o computador procura em uma série de diretório um arquivo binário com o nome 'cat' e o executa. O que nós queremos fazer é mover os arquivos binários do 'Blast+' para um diretório já especificado no PATH ou adicionar o diretório bin no seu PATH.
+
+Hoje nós vamos fazer o primeiro.
+
+Verifique quais diretórios estão no seu PATH
+```
+(base) rafael@malaco:~/rmblast-2.13.0$ echo $PATH
+/home/rafael/anaconda3/bin:/home/rafael/anaconda3/condabin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+```
+Note que cada diretório especificado está separado por ':'. Como mostra a figura abaixo:
+![Screenshot from 2023-03-14 15-21-21](https://user-images.githubusercontent.com/46658489/225094647-b12df718-ae44-4e68-a2ef-28d0e5a63bdb.png)
+
+
+Nós vamos adicionar os arquivos da pasta '/rmblast-2.13.0/bin' no PATH, para isso você precisa editar um arquivo oculto que especifica quais diretórios estão no seu PATH. O arquivo se chama '~/.profile'.
+
+**Atividade:** qual o significado de cada item no nome do arquivo '~/.profile'?
+
+
+Nós vamos copiar a linha abaixo no final do arquivo '~/.profile', salvar e fechar o arquivo. Nós utilizaremos o nano!
+
+Linha para ser copiada:
+```
+export PATH=$PATH:/home/rafael/rmblast-2.13.0/bin
+```
+
+Comandos para copiar:
+1. copie a linha acima (como se você fosse copiar e colar algo)
+2. digite no terminal 
+```
+nano ~/.bashrc
+```
+3. com o botão direito do mouse, cole o conteúdo copiado no final do arquivo.
+4. Salve o arquivo seguindo as instruções do nano. (Ctr+o e Ctr+x)
+
+5. use 'source ~/.bashrc' para carregar o novo PATH.
+```
+source ~/.bashrc
+```
+
+6. Teste se blastp está no seu PATH
+```
+blastp
+```
+
