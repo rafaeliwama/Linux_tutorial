@@ -161,4 +161,8 @@ anti_dec2016		anti_dec2016.pin
 anti_dec2016.fasta	anti_dec2016.psq
 ```
 
+Veja que o 'makeblastdb' criou vários arquivos com o prefixo 'anti_dec2016'. Estes arquivos compõe a base de dados utilizada.
+
+
+agora, nós vamos utilizar o blast para identificar 
 
