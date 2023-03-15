@@ -127,4 +127,38 @@ blastp
 
 ## Base de dados do blast
 
-Para rodar o blast, nós precisamos de uma base de dados para comparar com as sequências que nṍs queremos identificar. O 
+Para rodar o blast, nós precisamos de uma base de dados para comparar com as sequências que nṍs queremos identificar. Nós vamos utilizar o arquivo fasta que contém as proteínas anticoagulantes que nós utilizamos no tutorial anterior
+
+Para isso, dirija-se para o diretório que contém o arquivo 'anti_dec2016.fasta', que deve estar dentro do diretório 'Linux_tutorial'.
+
+Caso você não o encontre, crie um diretório novo, e baixe o arquivo utilizando o comando 'git'.
+
+```
+git clone https://github.com/rafaeliwama/Linux_tutorial.git
+```
+
+Agora, utilize o comando makeblastdb para criar uma base de dados do blast utilizando o arquivo 'anti_dec2016.fasta'.
+
+```
+makeblastdb -in anti_dec2016.fasta -dbtype prot -out anti_dec2016
+```
+Onde:
+1. makeblastdb - software utilizado para criar a base de dados
+
+2. -in antidec2016.fasta - '-in' é opção que especifica o arquivo utilizado para criar a base
+
+3. -dbtype prot - '-dbtype' é a opção que especifica o type de sequência da base e 'prot' indica que são sequências de proteína.
+
+4. -out antidec2016 - '-out' é a opção que especifica a base do nome da base nos arquivos do output e 'antidec2016' é a base do nome utilizada.
+
+
+Utilize o comando 'ls' para inspecionar o quais arquivos foram criados.
+
+```
+(base) Rafaels-MacBook-Pro:Linux_tutorial rafael$ ls
+README.md		anti_dec2016.phr	tested_anticogs.txt
+anti_dec2016		anti_dec2016.pin
+anti_dec2016.fasta	anti_dec2016.psq
+```
+
+
